@@ -1,0 +1,19 @@
+@use './scss/abstracts/' as *;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $poppins;
+  font-size: 18px;
+  color: $vd-blue;
+}
+
+.container {
+  border: 1px solid green;
+  width: min(100% - 2rem, 90rem);
+  margin: 0 auto;
+}
