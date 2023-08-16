@@ -6,14 +6,30 @@
   padding: 0;
 }
 
+ul {
+  list-style-type: none;  
+}
+
 body {
   font-family: $poppins;
   font-size: 18px;
   color: $vd-blue;
 }
 
+a {
+  text-decoration: none;
+}
+
 .container {
-  border: 1px solid green;
-  width: min(100% - 2rem, 90rem);
+  width: min(100% - 2rem, 475px);
   margin: 0 auto;
+  transition: 350ms ease-in-out;
+}
+
+@media (min-width:765px) {
+  .container {
+    width: min(100% - 2rem, 90rem);
+    margin: 0 auto;
+    transition: 350ms ease-in-out;
+  }
 }

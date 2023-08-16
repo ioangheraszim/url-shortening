@@ -1,11 +1,12 @@
 import { useState } from 'react'
 import './App.scss'
+import Navbar from './components/Navbar'
 
 function App() {
 
   return (
-    <main class="container">
-     <h1>Hello</h1>
+    <main className="container">
+     <Navbar />
     </main>
   )
 }

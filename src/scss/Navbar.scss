@@ -1,0 +1,93 @@
+@use './abstracts' as *;
+
+.nav {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    transition: 350ms ease-out;
+    position: relative;
+
+    .menu-items {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        position: absolute;
+
+        margin-top: 2.5rem;
+        top: 50%;
+        right: 10%;
+        min-width: 24rem;
+        background-color: $dark-violet;
+
+        // transform: scaleY(0);
+        // transform-origin: top;
+        // transition: 300ms;
+        // overflow: hidden;
+       
+
+        .nav-links {
+            text-align: center;    
+            min-width: 24rem;        
+            padding: 1rem;
+            
+            li {
+                padding: 1rem;
+                margin-bottom: 1rem;
+                a {
+                    padding: 1rem;
+                    color: #FFF;
+                }
+              
+            }
+
+            .btn-els {
+                border-top: 1px solid $grayish-violet;
+                display: flex;
+                flex-direction: column; 
+                padding: 1rem;               
+                
+                .sign-btn, .log-btn {
+                    cursor: pointer;
+                    border: none;
+                    padding: .9rem;
+                    font-size: 1rem;
+                    font-weight: 700;
+                    color: #FFF;
+                    margin: 1rem;
+                    border-radius: 20px;
+                    background-color: $cyan;
+                }
+
+                .log-btn {
+                    background-color: transparent;
+                }
+            }
+        }
+
+    }
+
+    .menu-items.active {
+        transition: 300ms;
+        transform: scaleY(1);
+    }
+
+    .toggle-menu {
+        
+        .menu-btn {
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+
+            img{
+                width: 35px;
+            }
+        }
+    }
+    
+}
+
+
+
+
