@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import "../scss/Navbar.scss";
 
 const Navbar = () => {
-
-  const [toggler, setToggler] = useState(false)
+  const [toggler, setToggler] = useState(false);
 
   const handleNavToggle = () => {
-    setToggler(!toggler)
-  }
+    setToggler(!toggler);
+  };
   return (
     <header>
       <nav className="nav">
@@ -16,14 +15,14 @@ const Navbar = () => {
         </div>
         <div className={`menu-items ${toggler ? "active" : ""}`}>
           <ul className="nav-links">
-            <li>
-              <a href="">Features</a>
+            <li className="features">
+              <a href="#">Features</a>
             </li>
             <li>
-              <a href="">Pricing</a>
+              <a href="#">Pricing</a>
             </li>
             <li>
-              <a href="">Resources</a>
+              <a href="#">Resources</a>
             </li>
           </ul>
           <div className="btn-els">
@@ -33,7 +32,14 @@ const Navbar = () => {
         </div>
         <div className="toggle-menu">
           <button onClick={handleNavToggle} className="menu-btn">
-            <img src={toggler ? "./images/icon-close.svg" : "./images/icon-hamburger.svg"} alt="hamburger menu icon" />
+            <img
+              src={
+                toggler
+                  ? "./images/icon-close.svg"
+                  : "./images/icon-hamburger.svg"
+              }
+              alt="hamburger menu icon"
+            />
           </button>
         </div>
       </nav>

@@ -32,6 +32,9 @@
       flex-direction: column;
       text-align: center;
 
+      .features {
+        margin-top: 1.5rem;
+      }
       li {
         padding: 1rem;
         margin-bottom: 1rem;
@@ -120,6 +123,10 @@
         padding: 0;
         margin-right: auto;
         margin-left: 1rem;
+
+        .features {
+            margin-top: auto;
+        }
 
         li {
           padding: 0rem 1rem;
