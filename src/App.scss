@@ -24,12 +24,12 @@ a {
   width: min(100% - 2rem, 475px);
   margin: 0 auto;
   transition: 350ms ease-in-out;
+  padding: 1rem;
 }
 
 @media (min-width:765px) {
   .container {
     width: min(100% - 2rem, 90rem);
-    margin: 0 auto;
-    transition: 350ms ease-in-out;
+    margin: 0 auto;    
   }
 }

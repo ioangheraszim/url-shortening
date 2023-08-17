@@ -1,14 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import "../scss/Navbar.scss";
 
 const Navbar = () => {
+
+  const [toggler, setToggler] = useState(false)
+
+  const handleNavToggle = () => {
+    setToggler(!toggler)
+  }
   return (
-    <navbar className="nav">
-      <div className="logo-div">
-        <img src="./images/logo.svg" alt="logo image" />       
-      </div>
-      <div className="menu-items">
-        <ul className="nav-links">
+    <header>
+      <nav className="nav">
+        <div className="logo-div">
+          <img src="./images/logo.svg" alt="logo image" />
+        </div>
+        <div className={`menu-items ${toggler ? "active" : ""}`}>
+          <ul className="nav-links">
             <li>
               <a href="">Features</a>
             </li>
@@ -18,18 +25,19 @@ const Navbar = () => {
             <li>
               <a href="">Resources</a>
             </li>
+          </ul>
           <div className="btn-els">
             <button className="log-btn">Login</button>
             <button className="sign-btn">Sign Up</button>
           </div>
-        </ul>       
-      </div>     
-      <div className="toggle-menu">
-        <button className="menu-btn">
-          <img src="./images/icon-hamburger.svg" alt="hamburger menu icon" />
-        </button>
-      </div>
-    </navbar>
+        </div>
+        <div className="toggle-menu">
+          <button onClick={handleNavToggle} className="menu-btn">
+            <img src={toggler ? "./images/icon-close.svg" : "./images/icon-hamburger.svg"} alt="hamburger menu icon" />
+          </button>
+        </div>
+      </nav>
+    </header>
   );
 };
 
