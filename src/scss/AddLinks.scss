@@ -1,0 +1,21 @@
+@use "./abstracts" as *;
+
+.add-link {
+    background-color: $vd-blue;
+    // background-image: url(./images/bg-shorten-mobile.svg);
+    // background-size: 100%;
+    // background-repeat: no-repeat;
+    // background-position: 10;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;    
+    padding: 2rem;
+    border-radius: 20px;
+    height: 200px;
+
+    .link-error {
+        color: $red;
+        text-align: left;
+    }
+   
+}

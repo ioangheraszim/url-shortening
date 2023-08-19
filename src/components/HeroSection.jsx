@@ -7,7 +7,6 @@ const HeroSection = () => {
       <div className='illustration'>
         <div className="my-img">
         </div>
-        {/* <img src="./images/illustration-working.svg" alt="working illustration" /> */}
       </div>      
       <div className='introduction'>
         <h1 className='heading'>More than just shorter links</h1>

@@ -1,8 +1,11 @@
 import React from 'react'
-
+import "../scss/AddLinks.scss";
 const AddLinks = () => {
   return (
-    <div>AddLinks</div>
+    <section className=gi'add-link'>
+      <input type="text" placeholder='fuck this shit' />
+      <button>asdasdas</button>
+    </section>
   )
 }
 
