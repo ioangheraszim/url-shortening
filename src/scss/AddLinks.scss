@@ -1,21 +1,153 @@
 @use "./abstracts" as *;
 
 .add-link {
-    background-color: $vd-blue;
-    // background-image: url(./images/bg-shorten-mobile.svg);
-    // background-size: 100%;
-    // background-repeat: no-repeat;
-    // background-position: 10;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;    
-    padding: 2rem;
-    border-radius: 20px;
-    height: 200px;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    .link-error {
-        color: $red;
-        text-align: left;
+  border-radius: 5px;
+  padding: 0.5rem;
+  background-color: $dark-violet;
+
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 0.75rem;
+
+    .link-input {
+      padding: 0.75rem;
+      width: 100%;
+      border: none;
+      border-radius: 5px;
     }
-   
+
+    .error-label {
+      margin-top: 0.2rem;
+      color: $red;
+      padding: 0.2rem;
+      font-size: 0.7rem;
+      font-style: italic;
+      font-weight: 500;
+    }
+
+    .short-btn {
+      width: 100%;
+      border: none;
+      margin-top: 0.5rem;
+      border-radius: 5px;
+      padding: 0.9rem 1.5rem;
+      background-color: $cyan;
+      font-size: 1rem;
+      font-weight: 700;
+      color: $white;
+      cursor: pointer;
+    }
+  }
+}
+
+/*Show links mobile styles*/
+.show-links {
+  margin-top: 1rem;
+  background-color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+
+  width: 100%;
+  font-size: 0.5rem;
+  padding: 0.74rem;
+  border-radius: 5px;
+
+  .long-url {
+    color: $vd-violet;
+    border-bottom: 1px solid $gray;
+    padding: 0 0 0.5rem;
+    width: 100%;
+  }
+
+  .short-url {
+    color: $cyan;
+    padding: 0.5rem 0rem;
+  }
+
+  .copy-btn {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 0.65rem 1.5rem;
+    background-color: $cyan;
+    font-weight: 700;
+    color: $white;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 810px) {
+  .add-link {
+    flex-direction: row;
+  }
+  /* Show links desktop styles */
+  .show-links {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    font-size: 0.7rem;
+    .short-url {
+      margin-left: auto;
+      margin-right: 1rem;
+    }
+
+    .long-url {
+      width: auto;
+      border: none;
+      padding: unset;
+    }
+
+    .copy-btn {
+      width: auto;
+    }
+  }
+  // .show-links {
+  //     margin: 1rem 0;
+  //     padding: 1rem 1.3rem;
+  //     font-size: .7rem;
+  //     font-weight: 500;
+  //     color: $vd-violet;
+  //     border-radius: 5px;
+  //     border: 1px solid green;
+  //     flex-direction: row;
+  //     justify-content: space-between;
+  //     align-items: center;
+
+  //     .right-side {
+  //         display: flex;
+  //         justify-content: space-between;
+  //         align-items: center;
+  //         flex-direction: row;
+  //         .short-url {
+  //             color: $cyan;
+  //         }
+
+  //         .copy-btn {
+  //             border: none;
+  //             border-radius: 5px;
+  //             padding: .65rem 1.5rem;
+  //             margin-left: 1.5rem;
+  //             background-color: $cyan;
+  //             font-weight: 700;
+  //             color: $white;
+  //             cursor: pointer;
+  //         }
+
+  //         .copy-btn.copied {
+  //             background-color: $dark-violet;
+  //         }
+  //     }
+  // }
 }
