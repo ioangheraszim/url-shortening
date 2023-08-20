@@ -20,6 +20,10 @@ a {
   text-decoration: none;
 }
 
+button {
+  font-family: $poppins;
+}
+
 .container {
   width: min(100% - 2rem, 475px);
   margin: 0 auto;

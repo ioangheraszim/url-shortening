@@ -5,13 +5,17 @@ const AddLinks = () => {
     <>
       <section className="add-link">
         <div className="input-container">
-          <input
-            className="link-input"
-            type="text"
-            placeholder="Shorten link here..."
-          />
-          <label className="error-label">Please add a link</label>
-          <button className="short-btn">Shorten It!</button>
+          <div className="the-input">
+            <input
+              className="link-input "
+              type="text"
+              placeholder="Shorten link here..."
+            />
+            <label className="error-label">Please add a link</label>
+          </div>
+          <div className="the-button">
+            <button className="short-btn">Shorten It!</button>
+          </div>
         </div>
       </section>
       <section className="show-links">
