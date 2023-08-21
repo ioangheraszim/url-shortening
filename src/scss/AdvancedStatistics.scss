@@ -1,0 +1,138 @@
+@use "./abstracts" as *;
+
+.statistics {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  padding-top: 2.5rem;
+  background-color: $bg-gray;
+
+  .stats-wrap {
+    text-align: center;
+    padding: 1rem;
+
+    .stats-title {
+      color: $vd-violet;
+      font-size: 1.15rem;
+      padding: 0 0 1rem 0;
+    }
+
+    .stats-para {
+      font-size: 0.75rem;
+      color: $grayish-violet;
+    }
+  }
+
+  .cards-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem;
+    text-align: center;
+
+    .green-thing {
+      background-color: $cyan;
+      width: 5px;
+      min-height: 50px;
+    }
+
+    .card-comp {
+      border-radius: 5px;
+      background-color: $white;
+      margin-top: 2rem;
+      padding: 1rem;
+      position: relative;
+
+      .card-title {
+        color: $vd-violet;
+        font-size: 1.2rem;
+        padding: 2.5rem 1rem 1rem 1rem;
+      }
+
+      .card-para {
+        padding: 0 1rem;
+        font-size: 0.7rem;
+        color: $gray;
+      }
+
+      .circle-wrap {
+        width: 75px;
+        height: 75px;
+        background-color: $dark-violet;
+        border-radius: 50%;
+        position: absolute;
+        top: -20%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 810px) {
+  .statistics {
+    .stats-wrap {
+      max-width: 575px;
+
+      .stats-title {
+        font-size: 2rem;
+        padding: 0 0 1rem 0;
+      }
+
+      .stats-para {
+        font-size: 1rem;
+      }
+    }
+    .cards-wrap {
+      margin-top: 5rem;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .card-comp {
+        min-width: 200px;
+        text-align: left;
+
+        .circle-wrap {
+          top: -20%;
+          left: 20%;
+        }
+
+        .card-title {
+          font-size: 1.3rem;
+        }
+
+        .card-para {
+          font-size: 0.85rem;
+          padding-bottom: 1rem;
+        }
+      }
+
+      .brand {
+        margin-bottom: 4rem;
+      }
+
+      .records {
+        margin-top: 3rem;
+      }
+
+      .fully {
+        margin-top: 8rem;
+      }
+
+      .green-thing {
+        min-width: 30px;
+        min-height: 7px;
+      }
+    }
+  }
+}
