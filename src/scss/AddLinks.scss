@@ -19,19 +19,19 @@
     .link-input {
       outline: none;
       padding: 0.75rem;
-      margin: .5rem 0;
+      margin: 0.5rem 0;
       width: 100%;
       border: none;
       border-radius: 5px;
     }
-    
+
     .link-input.error {
       color: $red;
       border: 2px solid $red;
       outline: 2px solid $red;
     }
 
-    .link-input.error::placeholder{
+    .link-input.error::placeholder {
       color: $red;
     }
 
@@ -104,6 +104,12 @@
 }
 
 @media (min-width: 810px) {
+  .add-link,
+  .show-links {
+    width: min(100% - 2rem, 70rem);
+    margin: 0 auto;
+  }
+  
   .add-link {
     background-image: url(./public/images/bg-shorten-desktop.svg);
     background-repeat: no-repeat;
@@ -116,7 +122,7 @@
       .link-input {
         margin: auto;
       }
-      
+
       .the-input {
         width: 80%;
         display: flex;

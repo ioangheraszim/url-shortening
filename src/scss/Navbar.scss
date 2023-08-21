@@ -107,6 +107,9 @@
 
 @media (min-width: 810px) {
   .nav {
+    width: min(100% - 2rem, 70rem);
+    margin: 0 auto;
+    
     transition: 350ms ease-out;
     position: unset;
     .logo-div {

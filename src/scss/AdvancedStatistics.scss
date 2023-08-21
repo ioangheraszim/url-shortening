@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 1rem;
+  padding: 4rem 1rem;
   padding-top: 2.5rem;
   background-color: $bg-gray;
 
@@ -24,7 +24,7 @@
       color: $grayish-violet;
     }
   }
-
+  
   .cards-wrap {
     display: flex;
     justify-content: space-between;
@@ -80,7 +80,16 @@
 }
 
 @media (min-width: 810px) {
-  .statistics {
+  .statistics {    
+    .wrapper {
+      width: min(100% - 2rem, 70rem);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    
     .stats-wrap {
       max-width: 575px;
 

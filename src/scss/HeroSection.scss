@@ -12,9 +12,14 @@
   height: 450px;
   z-index: -1;
   position: relative;
+
   .my-img {
     position: absolute;
-    width: 155%;
+    position: absolute;
+    top: 0%;
+    left: 75%;
+    transform: translateX(-50%);
+    width: 150%;
     height: 100%;
     background: url(./images/illustration-working.svg) no-repeat right/contain;
   }
@@ -24,14 +29,14 @@
   text-align: center;
 
   .heading {
-    font-size: 2.5rem;
+    line-height: 1.2;
+    font-size: 2rem;
     font-weight: 700;
     color: $vd-blue;
   }
 
   .para {
-    padding: 1rem;
-    font-size: 0.95rem;
+    font-size: 0.75rem;
     font-weight: 500;
     color: $gray;
   }
@@ -52,25 +57,28 @@
 
 @media (min-width: 810px) {
   .hero-content {
+    width: min(100% - 2rem, 70rem);
+    margin: 0 auto;
+
     transition: 300ms all;
     display: flex;
     flex-direction: row-reverse;
 
     .illustration {
-      width: 70%;
+      width: 50%;
       margin-left: 1rem;
     }
 
     .introduction {
-      padding: 1rem;
+      width: min(100% - 2rem, 45rem);
       text-align: left;
 
       .heading {
-        font-size: 4.5rem;
+        font-size: 5rem;
       }
 
       .para {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         margin-bottom: 1rem;
       }
 
@@ -78,7 +86,7 @@
         font-size: 1rem;
         font-weight: 700;
         margin: 1rem 0;
-        padding: 1.2rem 3rem;
+        padding: 0.7rem 2.5rem;
         border-radius: 2rem;
         cursor: pointer;
       }

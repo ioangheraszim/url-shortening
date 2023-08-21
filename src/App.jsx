@@ -4,6 +4,8 @@ import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import AddLinks from "./components/AddLinks";
 import AdvancedStatistics from "./components/AdvancedStatistics";
+import Boost from "./components/Boost";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
       <HeroSection />
       <AddLinks />
       <AdvancedStatistics />
+      <Boost />
+      <Footer />
     </main>
   );
 }
