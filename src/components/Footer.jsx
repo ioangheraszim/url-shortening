@@ -9,8 +9,8 @@ function Footer() {
         </div>
         <div className="footer-list">
           <ul>
-            <li class="nav-title">Feautures</li>
-            <ul class="sub-title">
+            <li className="nav-title">Feautures</li>
+            <ul className="sub-title">
               <li>
                 <a href="#">Link Shortening</a>
               </li>
@@ -23,8 +23,8 @@ function Footer() {
             </ul>
           </ul>
           <ul>
-            <li class="nav-title">Resources</li>
-            <ul class="sub-title">
+            <li className="nav-title">Resources</li>
+            <ul className="sub-title">
               <li>
                 <a href="#">Blog</a>
               </li>
@@ -37,8 +37,8 @@ function Footer() {
             </ul>
           </ul>
           <ul>
-            <li class="nav-title">Company</li>
-            <ul class="sub-title">
+            <li className="nav-title">Company</li>
+            <ul className="sub-title">
               <li>
                 <a href="#">About</a>
               </li>

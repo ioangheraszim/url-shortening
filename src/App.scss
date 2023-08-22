@@ -1,4 +1,4 @@
-@use './scss/abstracts/' as *;
+@use "./scss/abstracts/" as *;
 
 * {
   box-sizing: border-box;
@@ -7,7 +7,7 @@
 }
 
 ul {
-  list-style-type: none;  
+  list-style-type: none;
 }
 
 body {
@@ -28,9 +28,9 @@ button {
   transition: 350ms ease-in-out;
 }
 
-@media (min-width:765px) {
+@media (min-width: 810px) {
   .container {
     width: min(100% - 2rem, 90rem);
-    margin: 0 auto;    
+    margin: 0 auto;
   }
 }
