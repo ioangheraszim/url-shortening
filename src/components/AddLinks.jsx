@@ -3,42 +3,52 @@ import "../scss/AddLinks.scss";
 
 const AddLinks = () => {
   // states
-  const [links, setLinks] = useState([
+  const [savedLinks, setSavedLinks] = useState([
     {
       id: crypto.randomUUID(),
       text: "https://testlink.com/signup",
+      newShortLink: "https://shrtco.de/abc123"
     },
   ]);
+  
 
-  const [shorten, setShorten] = useState("");
   const [linkValue, setLinkValue] = useState("");
+  const [shorURL, setShortURL] = useState("")
 
-  const [shortenedLink, setShortenedLink] = useState(null);
-  const [linkInfo, setLinkInfo] = useState(null);
+  // functions
 
   const getErrorInput = () =>
     !isValidHttpLink(linkValue) && linkValue.trim() !== "" ? "error" : "";
   const getErrorLabel = () =>
     !isValidHttpLink(linkValue) && linkValue.trim() !== "" ? "show" : "";
-
-  // functions
-  const addLink = () => {
-    if (isValidHttpLink(linkValue) && linkValue.trim() !== "") {
-      setLinks((prevLinks) => [
-        ...prevLinks,
-        {
-          id: crypto.randomUUID(),
-          text: linkValue,
-        },
-      ]);
-      setLinkValue("");
-    }
-  };
-
+  
   const isValidHttpLink = (link) => {
     const httpPattern = /^https?:\/\//i;
     return httpPattern.test(link);
   };
+
+  const handleShortenLink = async () => {
+    try {
+      const response = await fetch(`https://api.shrtco.de/v2/shorten?url=${linkValue}`);
+      const data = await response.json();
+
+      if(data.ok) {
+        const newShortLink = data.result.full_short_link;
+        setShortURL(newShortLink)
+        setSavedLinks([...savedLinks,  {
+          id: crypto.randomUUID(),
+          text: linkValue,
+          newShortLink
+        },])
+      } else {
+        setShortURL("")
+      }     
+    }
+    catch (error){
+        console.error('Ann error has occured', error)
+        setShortURL('')
+    }
+  }
 
   return (
     <>
@@ -53,22 +63,25 @@ const AddLinks = () => {
               className={`link-input ${getErrorInput()}`}
               placeholder="Shorten link here..."
             />
-            <label htmlFor="linkInput"className={`error-label ${getErrorLabel()}`}>
+            <label
+              htmlFor="linkInput"
+              className={`error-label ${getErrorLabel()}`}
+            >
               Please add a link
             </label>
           </div>
           <div className="the-button">
-            <button onClick={addLink} className="short-btn">
+            <button onClick={handleShortenLink} className="short-btn">
               Shorten It!
             </button>
           </div>
         </div>
       </section>
-      {links.map((link) => {
+      {savedLinks.map((link) => {
         return (
           <section className="show-links" key={link.id}>
             <h2 className="long-url">{link.text}</h2>
-            <h2 className="short-url">https://rel.ink/k4lkyk</h2>
+            <a href={link.newShortLink} className="short-url">{link.newShortLink}</a>
             <button className="copy-btn">Copy</button>
           </section>
         );
