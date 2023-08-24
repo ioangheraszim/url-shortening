@@ -61,6 +61,11 @@
       color: $white;
       cursor: pointer;
     }
+
+    .short-btn:hover {
+      opacity: .7;
+    }
+    
   }
 }
 
@@ -96,6 +101,10 @@
     padding: 0.5rem 0rem;
   }
 
+  .short-url:hover {
+    text-decoration: underline;
+  }
+  
   .copy-btn {
     width: 100%;
     border: none;
@@ -105,6 +114,10 @@
     font-weight: 700;
     color: $white;
     cursor: pointer;
+  }
+
+  .copy-btn:hover {
+    opacity: .7;
   }
 }
 
