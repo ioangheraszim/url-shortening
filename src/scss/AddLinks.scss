@@ -119,6 +119,10 @@
   .copy-btn:hover {
     opacity: .7;
   }
+
+  .copy-btn.copied {
+    background-color: $vd-violet;
+  }
 }
 
 @media (min-width: 810px) {

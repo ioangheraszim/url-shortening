@@ -13,8 +13,8 @@ const AddLinks = () => {
   
 
   const [linkValue, setLinkValue] = useState("");
-  const [shorURL, setShortURL] = useState("")
-
+  const [shortURL, setShortURL] = useState("")
+  const [copyClicked, setCopyClicked] = useState(false)
   // functions
 
   const getErrorInput = () =>
@@ -50,6 +50,15 @@ const AddLinks = () => {
     }
   }
 
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(linkValue)
+    setCopyClicked(true)
+
+    setTimeout(() => {
+      setCopyClicked(false)
+    }, 2000)
+  }
+
   return (
     <>
       <section className="add-link">
@@ -82,7 +91,7 @@ const AddLinks = () => {
           <section className="show-links" key={link.id}>
             <h2 className="long-url">{link.text}</h2>
             <a href={link.newShortLink} className="short-url">{link.newShortLink}</a>
-            <button className="copy-btn">Copy</button>
+            <button onClick={copyToClipboard} className={`copy-btn ${copyClicked ? "copied" : ""}`}>{copyClicked ? "Copied" : "Copy"}</button>
           </section>
         );
       })}
