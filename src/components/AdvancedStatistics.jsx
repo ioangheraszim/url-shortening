@@ -9,7 +9,7 @@ function AdvancedStatistics() {
           <h2 className="stats-title">Advanced Statistics</h2>
           <p className="stats-para">
             Track how your links are performing across the web with our advanced
-            statistics dahsboard
+            statistics dahsboard.
           </p>
         </div>
         <div className="cards-wrap">
