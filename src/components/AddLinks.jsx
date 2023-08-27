@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../scss/AddLinks.scss";
 
 const AddLinks = () => {
@@ -55,6 +55,7 @@ const AddLinks = () => {
     return httpPattern.test(link);
   };
 
+  // copies short link to clip board
   const copyToClipboard = (newShortLink) => {
     navigator.clipboard.writeText(newShortLink);
     setCopyClicked(true);
@@ -63,6 +64,20 @@ const AddLinks = () => {
       setCopyClicked(false);
     }, 500);
   };
+
+  // save link so they can load after reload
+  useEffect( () => {
+    localStorage.setItem("savedLinks", JSON.stringify(savedLinks));
+  }, [savedLinks])
+
+  // load links saved to local storage 
+  useEffect(() => {
+    const storeLinks = localStorage.getItem("savedLinks")
+    if(storeLinks) {
+      setSavedLinks(JSON.parse(storeLinks))
+    }
+  }, [])
+
 
   return (
     <>
