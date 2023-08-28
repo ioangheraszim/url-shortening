@@ -45,7 +45,7 @@ Users should be able to:
 
 - Mobile Screenshots
 <p>
-  <img src="./src/assets/screenshots/mobile-screenshot.png" />
+  <img src="./src/assets/screenshots/mobile-screenshot.png" width="375px" />
 </p>
 
 ### Links
