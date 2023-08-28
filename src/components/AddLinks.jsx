@@ -6,8 +6,8 @@ const AddLinks = () => {
   const [savedLinks, setSavedLinks] = useState([
     {
       id: crypto.randomUUID(),
-      text: "https://testlink.com/signup",
-      newShortLink: "https://shrtco.de/dummyText123",
+      text: "https://facebook.com/signup",
+      newShortLink: "https://shrtco.de/je1092e",
     },
   ]);
 
@@ -66,24 +66,23 @@ const AddLinks = () => {
   };
 
   // save link so they can load after reload
-  useEffect( () => {
-    localStorage.setItem("savedLinks", JSON.stringify(savedLinks));
-  }, [savedLinks])
-
-  // load links saved to local storage 
   useEffect(() => {
-    const storeLinks = localStorage.getItem("savedLinks")
-    if(storeLinks) {
-      setSavedLinks(JSON.parse(storeLinks))
+    localStorage.setItem("savedLinks", JSON.stringify(savedLinks));
+  }, [savedLinks]);
+
+  // load links saved to local storage
+  useEffect(() => {
+    const storeLinks = localStorage.getItem("savedLinks");
+    if (storeLinks) {
+      setSavedLinks(JSON.parse(storeLinks));
     }
-  }, [])
+  }, []);
 
   const deleteLink = (id) => {
     setSavedLinks((prevSavedLinks) => {
-      return prevSavedLinks.filter((links) => links.id !== id)
-    })
-  }
-
+      return prevSavedLinks.filter((links) => links.id !== id);
+    });
+  };
 
   return (
     <>
@@ -125,8 +124,9 @@ const AddLinks = () => {
             >
               {copyClicked ? "Copied" : "Copy"}
             </button>
-            <button onClick={() => deleteLink(link.id)}
-            className="delete-btn">Delete</button>
+            <button onClick={() => deleteLink(link.id)} className="delete-btn">
+              Delete
+            </button>
           </section>
         );
       })}
