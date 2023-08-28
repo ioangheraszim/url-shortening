@@ -105,7 +105,7 @@
     text-decoration: underline;
   }
   
-  .copy-btn {
+  .copy-btn, .delete-btn {
     width: 100%;
     border: none;
     border-radius: 5px;
@@ -116,12 +116,17 @@
     cursor: pointer;
   }
 
-  .copy-btn:hover {
+  .copy-btn:hover, .delete-btn:hover {
     opacity: .7;
   }
 
   .copy-btn.copied {
     background-color: $vd-violet;
+  }
+
+  .delete-btn {
+    background-color: $red;
+    margin-top: .5rem;    
   }
 }
 
@@ -183,8 +188,13 @@
       padding: unset;
     }
 
-    .copy-btn {
+    .copy-btn, .delete-btn {
       width: auto;
+    }
+
+    .delete-btn {
+      margin-top: unset;
+      margin-left: .2rem;
     }
   }
 }

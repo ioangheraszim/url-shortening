@@ -78,6 +78,12 @@ const AddLinks = () => {
     }
   }, [])
 
+  const deleteLink = (id) => {
+    setSavedLinks((prevSavedLinks) => {
+      return prevSavedLinks.filter((links) => links.id !== id)
+    })
+  }
+
 
   return (
     <>
@@ -119,6 +125,8 @@ const AddLinks = () => {
             >
               {copyClicked ? "Copied" : "Copy"}
             </button>
+            <button onClick={() => deleteLink(link.id)}
+            className="delete-btn">Delete</button>
           </section>
         );
       })}
