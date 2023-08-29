@@ -9,7 +9,7 @@
   flex-direction: column;
 
   padding: 3rem;
-  background: $dark-violet url(./public/images/bg-boost-mobile.svg) no-repeat center/cover;
+  background: $dark-violet url(../assets/images/bg-boost-mobile.svg) no-repeat center/cover;
 
   .boost-title {
     font-size: 1.25rem;
@@ -38,7 +38,7 @@
 @media (min-width: 810px)  {
 
     .boost {
-        background: $dark-violet url(./public/images/bg-boost-desktop.svg) no-repeat center/cover;
+        background: $dark-violet url(../assets/images/bg-boost-desktop.svg) no-repeat center/cover;
     }
     
 }
